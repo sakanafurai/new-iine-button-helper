@@ -3,13 +3,15 @@
 New iine button helper plugin for Bludit CMS.<br>
 This plugin is only available in Japanese language.
 
-do様で配布している「[いいねボタン・改](https://do.gt-gt.org/product/newiine/)」をBludit CMSに設置するためのプラグインです。
+do様で配布している「[いいねボタン・改](https://do.gt-gt.org/product/newiine/)」をBludit CMSに設置するためのプラグインです。<br>
 pageEnd（ページ下）に設置します。
 
 **※いいねボタン・改のインストールが別途必要です。**
 
 ## 設定方法
-1. プラグインデータを```bludit```ディレクトリ内の```bl-plugin```ディレクトリにコピーする。
+プラグインを[ダウンロード](https://github.com/sakanafurai/new-iine-button-helper/releases/download/1.0.0/new-iine-button-helper.zip)
+
+1. zipファイルを解凍し、```new-iine-button-helper```フォルダを```bludit```ディレクトリ内の```bl-plugin```ディレクトリにコピーする。
 2. Bluditの管理画面の『プラグイン』のページで「いいねボタン・改ヘルパー」を有効化する。
 3. 「いいねボタン・改ヘルパー」の設定ボタンを押す。
 4. 『いいねボタン・改のディレクトリ』に、いいねボタン・改をインストールしているディレクトリを入力する。
