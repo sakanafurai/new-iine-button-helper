@@ -18,7 +18,8 @@ class newIineButton extends Plugin {
 			'ThanksImageURL' => '',
 			'ThanksImageURL2' => '',
 			'ThanksImageURL3' => '',
-			'iconFontSource' => 'google'
+			'iconFontSource' => 'google',
+			'iconFontSource' => 'bludit'
 		);
 	}
 
@@ -134,6 +135,17 @@ class newIineButton extends Plugin {
 		$html .= '<option value="jsdelivr" ' . ($this->getValue('iconFontSource') === 'jsdelivr' ? 'selected' : '') . '>jsDelivr</option>';
 		'>Google Fonts</option>';
 		$html .= '<option value="none" ' . ($this->getValue('iconFontSource') === 'none' ? 'selected' : '') . '>読み込まない（テーマで読み込み済み）</option>';
+		$html .= '</select>';
+		$html .= '</div>';
+
+		$html .= '<div>';
+		$html .= '<label>jQueryの取得元</label>';
+		$html .= '<select name="jQuerySource">';
+		$html .= '<option value="googleapis" ' . ($this->getValue('jQuerySource') === 'googleapis' ? 'selected' : '') . '>Google</option>';
+		$html .= '<option value="jquerycom" ' . ($this->getValue('jQuerySource') === 'jquerycom' ? 'selected' : '') . '>jQuery.com</option>';
+		$html .= '<option value="bludit" ' . ($this->getValue('jQuerySource') === 'bludit' ? 'selected' : '') . '>Bludit内蔵</option>';
+		'>Google Fonts</option>';
+		$html .= '<option value="none" ' . ($this->getValue('jQuerySource') === 'none' ? 'selected' : '') . '>読み込まない（テーマで読み込み済み）</option>';
 		$html .= '</select>';
 		$html .= '</div>';
 
