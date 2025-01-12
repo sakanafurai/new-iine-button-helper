@@ -19,7 +19,7 @@ class newIineButton extends Plugin {
 			'ThanksImageURL2' => '',
 			'ThanksImageURL3' => '',
 			'iconFontSource' => 'google',
-			'iconFontSource' => 'bludit'
+			'jQuerySource' => 'bludit'
 		);
 	}
 
@@ -289,8 +289,23 @@ class newIineButton extends Plugin {
 	{
 	  global $page;
 
-	// jQueryとスクリプトを読み込み（jQueryはBludit内蔵のものを使用）
-	  echo Theme::jquery();
-	  return '<script src="' .($this->getValue('iineURL')). '/newiine.js"></script>';
+	  if ($this->getValue('jQuerySource') == 'googleapis') {
+		$jQuerySource = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>'.PHP_EOL;
+	  } elseif ($this->getValue('jQuerySource') == 'jquerycom') {
+		$jQuerySource = '<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>'.PHP_EOL;
+	  }	elseif ($this->getValue('jQuerySource') == 'bludit') {
+		$jQuerySource = Theme::jquery();
+	  }
+
+	  //いいねボタン・改のディレクトリを指定
+	  $iineURL = $this->getValue('iineURL');
+
+	// jQueryとスクリプトを読み込み
+	  $script = <<<EOF
+	  $jQuerySource
+	  <script src="$iineURL/newiine.js"></script>
+	EOF;
+
+	  return $script;
 	}
 }
