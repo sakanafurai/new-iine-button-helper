@@ -265,7 +265,7 @@ class newIineButton extends Plugin {
 	  if ($this->getValue('thanksMessage3')) {
 		$thanksMessage3 =
 		'<div class="newiine_box">
-		<img src="' . $thanksImageURL . '" alt="THANK YOU!">
+		<img src="' . $thanksImageURL3 . '" alt="THANK YOU!">
 		<p>' .$this->getValue('thanksMessage3'). '</p>
 		</div>';
 	  }
