@@ -212,7 +212,9 @@ class newIineButton extends Plugin {
 	  // 「アイコンを表示（showIcon）」が有効のとき、アイコンの表示を追加
 	  if ($this->getValue('showIcon')) {
 		$showIcon = '<span class="material-icons-round">favorite</span>';
-	  }
+	  } else {
+		$showIcon = '';
+		}
 
 	  // 「いいね数を表示（showCounts）」が有効のとき、カウントの表示を追加
 	  if ($this->getValue('showCounts')) {
