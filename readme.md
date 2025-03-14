@@ -8,6 +8,10 @@ pageEnd（ページ下）に設置します。
 
 **※いいねボタン・改のインストールが別途必要です。**
 
+### 【重要】
+**v1.2.0でお礼のメッセージの画像URLに関係する内部設定を変更したため、すでに設定しているURLが消える可能性がございます。**
+**必ず設定したメッセージ画像のURLの控えをとってからプラグインを更新してください。**
+
 ## 設定方法
 プラグインを[ダウンロード](https://github.com/sakanafurai/new-iine-button-helper/releases/download/1.2.0/new-iine-button-helper.zip)
 
