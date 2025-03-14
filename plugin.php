@@ -304,7 +304,9 @@ class newIineButton extends Plugin {
 		$jQuerySource = '<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>'.PHP_EOL;
 	  }	elseif ($this->getValue('jQuerySource') == 'bludit') {
 		$jQuerySource = Theme::jquery();
-	  }
+	  } else {
+		$jQuerySource = '';
+		}
 
 	  //いいねボタン・改のディレクトリを指定
 	  $iineURL = $this->getValue('iineURL');
