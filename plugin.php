@@ -7,7 +7,7 @@ class newIineButton extends Plugin {
 		$this->dbFields = array(
 			'iineURL' => '',
 			'useUniqueButtonName' => true,
-  			'countLimitNumber' => '10',
+			'countLimitNumber' => '10',
 			'buttonShape' => 'default',
 			'showIcon' => true,
 			'showCounts' => true,
