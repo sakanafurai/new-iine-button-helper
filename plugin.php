@@ -217,9 +217,9 @@ class newIineButton extends Plugin {
 
 	  // ポップアップの方向
 	  if ($this->getValue('popupDirection') == 'up') {
-		$popupDirection = 'newiine_thanks_up';
+		$popupDirection = '<div class="newiine_thanks newiine_thanks_up" style="display:none;">';
 	  } elseif ($this->getValue('popupDirection') == 'down') {
-		$popupDirection = 'newiine_thanks_down';
+		$popupDirection = '<div class="newiine_thanks newiine_thanks_down" style="display:none;">';
 	  }
 
 	  // お礼メッセージの内容
@@ -278,7 +278,7 @@ class newIineButton extends Plugin {
 	  <span>いいね</span>
 
 	  <!-- お礼メッセージここから -->
-	  <div class="newiine_thanks $popupDirection" style="display:none;">
+	  $popupDirection
 	  $thanksMessage
 	  $thanksMessage2
 	  $thanksMessage3
