@@ -160,7 +160,9 @@ class newIineButton extends Plugin {
 		$iconFontSource = '<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round" rel="stylesheet">'.PHP_EOL;
 	  } elseif ($this->getValue('showIcon') && $this->getValue('iconFontSource') == 'jsdelivr') {
 		$iconFontSource = '<link href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css" rel="stylesheet">'.PHP_EOL;
-	  }
+		} else {
+		$iconFontSource = '';
+		}
 
 	  // フォントとボタン用のCSSを読み込み
 	  return $iconFontSource .
