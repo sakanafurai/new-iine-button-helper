@@ -211,14 +211,14 @@ class newIineButton extends Plugin {
 
 	  // 「アイコンを表示（showIcon）」が有効のとき、アイコンの表示を追加
 	  if ($this->getValue('showIcon')) {
-		$showIcon = '<span class="material-icons-round">favorite</span>';
+		$showIcon = '<span class="material-icons-round">favorite</span>'.PHP_EOL;
 	  } else {
 		$showIcon = '';
 		}
 
 	  // 「いいね数を表示（showCounts）」が有効のとき、カウントの表示を追加
 	  if ($this->getValue('showCounts')) {
-		$showCounts = '<span class="newiine_count"></span>';
+		$showCounts = '<span class="newiine_count"></span>'.PHP_EOL;
 		} else {
 		$showCounts = '';
 		}
@@ -257,7 +257,7 @@ class newIineButton extends Plugin {
 			'<div class="newiine_box">
 			<img src="' . $thanksImageURL . '" alt="THANK YOU!">
 			<p>' .$this->getValue('thanksMessage'). '</p>
-			</div>';
+			</div>'.PHP_EOL;
 		}
 
 	  if ($this->getValue('thanksMessage2')) {
@@ -265,7 +265,7 @@ class newIineButton extends Plugin {
 	  '<div class="newiine_box">
 	  <img src="' . $thanksImageURL2 . '" alt="THANK YOU!">
 	  <p>' .$this->getValue('thanksMessage2'). '</p>
-	  </div>';
+	  </div>'.PHP_EOL;
 	  } else {
 		$thanksMessage2 = '';
 		}
@@ -275,7 +275,7 @@ class newIineButton extends Plugin {
 		'<div class="newiine_box">
 		<img src="' . $thanksImageURL3 . '" alt="THANK YOU!">
 		<p>' .$this->getValue('thanksMessage3'). '</p>
-		</div>';
+		</div>'.PHP_EOL;
 		} else {
 			$thanksMessage3 = '';
 		}
@@ -285,16 +285,10 @@ class newIineButton extends Plugin {
 	  $code = <<<EOF
 	  <!-- いいねボタン改ここから -->
 	  <button type="submit" class="newiine_btn$isRounded" data-iinename="$buttonName" data-iinecountlimit="$countLimitNumber">
-	  $showIcon
-	  $showCounts
-	  <span>いいね</span>
+	  $showIcon$showCounts<span>いいね</span>
 
 	  <!-- お礼メッセージここから -->
-	  $popupDirection
-	  $thanksMessage
-	  $thanksMessage2
-	  $thanksMessage3
-	  </div>
+	  $popupDirection$thanksMessage$thanksMessage2$thanksMessage3</div>
 	  <!-- お礼メッセージここまで -->
 	  </button>
 	  <!-- いいねボタン改ここまで -->
