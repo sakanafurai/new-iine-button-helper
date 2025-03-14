@@ -15,9 +15,9 @@ class newIineButton extends Plugin {
 			'thanksMessage' => 'ありがとうございます！',
 			'thanksMessage2' => '',
 			'thanksMessage3' => '',
-			'ThanksImageURL' => '',
-			'ThanksImageURL2' => '',
-			'ThanksImageURL3' => '',
+			'thanksImageURL' => '',
+			'thanksImageURL2' => '',
+			'thanksImageURL3' => '',
 			'iconFontSource' => 'google',
 			'jQuerySource' => 'bludit'
 		);
@@ -96,7 +96,7 @@ class newIineButton extends Plugin {
 
 		$html .= '<div>';
 		$html .= '<label>メッセージの画像</label>';
-		$html .= '<input name="ThanksImageURL" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('ThanksImageURL') . '">';
+		$html .= '<input name="thanksImageURL" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('thanksImageURL') . '">';
 		$html .= '<span class="tip">お礼のメッセージに使用する画像のURLを入力します。空欄の場合、デフォルトの画像を使用します。</span>';
 		$html .= '</div>';
 
@@ -109,7 +109,7 @@ class newIineButton extends Plugin {
 
 		$html .= '<div>';
 		$html .= '<label>メッセージの画像</label>';
-		$html .= '<input name="ThanksImageURL2" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('ThanksImageURL2') . '">';
+		$html .= '<input name="thanksImageURL2" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('thanksImageURL2') . '">';
 		$html .= '<span class="tip">設定しない場合は「お礼のメッセージ1」で設定したURLを使用します。</span>';
 		$html .= '</div>';
 
@@ -121,7 +121,7 @@ class newIineButton extends Plugin {
 
 		$html .= '<div>';
 		$html .= '<label>メッセージの画像</label>';
-		$html .= '<input name="ThanksImageURL3" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('ThanksImageURL3') . '">';
+		$html .= '<input name="thanksImageURL3" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('thanksImageURL3') . '">';
 		$html .= '<span class="tip">設定しない場合は「お礼のメッセージ1」で設定したURLを使用します。</span>';
 		$html .= '</div>';
 
@@ -226,20 +226,20 @@ class newIineButton extends Plugin {
 	  $thanksMessage = $this->getValue('thanksMessage');
 
 	  // お礼メッセージの画像の取得元
-	  if ($this->getValue('ThanksImageURL')) {
-		$thanksImageURL = $this->getValue('ThanksImageURL');
+	  if ($this->getValue('thanksImageURL')) {
+		$thanksImageURL = $this->getValue('thanksImageURL');
 	  } else {
 		$thanksImageURL = $this->getValue('iineURL') . "/example.jpg";
 	  }
 
-	  if ($this->getValue('ThanksImageURL2')) {
-		$thanksImageURL2 = $this->getValue('ThanksImageURL2');
+	  if ($this->getValue('thanksImageURL2')) {
+		$thanksImageURL2 = $this->getValue('thanksImageURL2');
 	  } else {
 		$thanksImageURL2 = $thanksImageURL;
 	  }
 
-	  if ($this->getValue('ThanksImageURL3')) {
-		$thanksImageURL3 = $this->getValue('ThanksImageURL3');
+	  if ($this->getValue('thanksImageURL3')) {
+		$thanksImageURL3 = $this->getValue('thanksImageURL3');
 	  } else {
 		$thanksImageURL3 = $thanksImageURL;
 	  }
