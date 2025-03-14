@@ -266,7 +266,9 @@ class newIineButton extends Plugin {
 	  <img src="' . $thanksImageURL2 . '" alt="THANK YOU!">
 	  <p>' .$this->getValue('thanksMessage2'). '</p>
 	  </div>';
-	  }
+	  } else {
+		$thanksMessage2 = '';
+		}
 
 	  if ($this->getValue('thanksMessage3')) {
 		$thanksMessage3 =
@@ -274,7 +276,9 @@ class newIineButton extends Plugin {
 		<img src="' . $thanksImageURL3 . '" alt="THANK YOU!">
 		<p>' .$this->getValue('thanksMessage3'). '</p>
 		</div>';
-	  }
+		} else {
+			$thanksMessage3 = '';
+		}
 
 
 	// ページに出力するボタンのコード
