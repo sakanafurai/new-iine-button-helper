@@ -203,7 +203,9 @@ class newIineButton extends Plugin {
 	  // 「丸型のボタンを使用する（buttonShape）」が有効のとき、クラス「（スペース）newiine_type02」を追加
 	  if ($this->getValue('buttonShape') == 'rounded') {
 		$isRounded = ' newiine_type02';
-	  }
+	  } else {
+		$isRounded = '';
+		}
 
 	  // 「アイコンを表示（showIcon）」が有効のとき、アイコンの表示を追加
 	  if ($this->getValue('showIcon')) {
