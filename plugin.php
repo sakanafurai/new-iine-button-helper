@@ -82,6 +82,8 @@ class newIineButton extends Plugin {
 		$html .= '<select name="popupDirection">';
 		$html .= '<option value="up" ' . ($this->getValue('popupDirection') === 'up' ? 'selected' : '') . '>上</option>';
 		$html .= '<option value="down" ' . ($this->getValue('popupDirection') === 'down' ? 'selected' : '') . '>下</option>';
+		$html .= '<option value="up-right" ' . ($this->getValue('popupDirection') === 'up-right' ? 'selected' : '') . '>上（右寄せ）</option>';
+		$html .= '<option value="down-right" ' . ($this->getValue('popupDirection') === 'down-right' ? 'selected' : '') . '>下（右寄せ）</option>';
 		$html .= '</select>';
 		$html .= '</div>';
 
@@ -228,7 +230,11 @@ class newIineButton extends Plugin {
 		$popupDirection = '<div class="newiine_thanks newiine_thanks_up" style="display:none;">';
 	  } elseif ($this->getValue('popupDirection') == 'down') {
 		$popupDirection = '<div class="newiine_thanks newiine_thanks_down" style="display:none;">';
-	  }
+		} elseif ($this->getValue('popupDirection') == 'up-right') {
+		$popupDirection = '<div class="newiine_thanks newiine_thanks_up newiine_thanks_right" style="display:none;">';
+		}elseif ($this->getValue('popupDirection') == 'down-right') {
+		$popupDirection = '<div class="newiine_thanks newiine_thanks_down newiine_thanks_right" style="display:none;">';
+		}
 
 	  // お礼メッセージの内容
 	  $thanksMessage = $this->getValue('thanksMessage');
