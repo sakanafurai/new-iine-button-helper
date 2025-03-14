@@ -219,7 +219,9 @@ class newIineButton extends Plugin {
 	  // 「いいね数を表示（showCounts）」が有効のとき、カウントの表示を追加
 	  if ($this->getValue('showCounts')) {
 		$showCounts = '<span class="newiine_count"></span>';
-	  }
+		} else {
+		$showCounts = '';
+		}
 
 	  // ポップアップの方向
 	  if ($this->getValue('popupDirection') == 'up') {
