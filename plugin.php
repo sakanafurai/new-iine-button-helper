@@ -27,7 +27,7 @@ class newIineButton extends Plugin {
 	{
 		global $L;
 
-		$html .= '<h4 class="mt-3">基本設定</h3>';
+		$html  = '<h4 class="mt-3">基本設定</h3>';
 		$html .= '<div>';
 		$html .= '<label>いいねボタン・改のディレクトリ</label>';
 		$html .= '<input name="iineURL" class="form-control" type="url" pattern="http.*://.*" dir="auto" value="' . $this->getValue('iineURL') . '" placeholder="http://yourdomain/newiine_app">';
