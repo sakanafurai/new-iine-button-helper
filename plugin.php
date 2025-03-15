@@ -167,8 +167,9 @@ class newIineButton extends Plugin {
 		}
 
 	  // フォントとボタン用のCSSを読み込み
-	  return $iconFontSource .
-	  '<link rel="stylesheet" href="' .($this->getValue('iineURL')). '/newiine.css">'.PHP_EOL;
+	  echo '<!-- いいねボタン・改 ボタン用CSS -->'.PHP_EOL;
+	  echo $iconFontSource;
+	  echo '<link rel="stylesheet" href="' .($this->getValue('iineURL')). '/newiine.css">'.PHP_EOL;
 	}
 
 	public function pageEnd()
@@ -321,8 +322,8 @@ class newIineButton extends Plugin {
 
 	// jQueryとスクリプトを読み込み
 	  $script = <<<EOF
-	  $jQuerySource
-	  <script src="$iineURL/newiine.js"></script>
+	  <!-- いいねボタン・改 スクリプト -->
+	  $jQuerySource<script src="$iineURL/newiine.js"></script>
 	EOF;
 
 	  return $script;
