@@ -259,14 +259,6 @@ class newIineButton extends Plugin {
 		$thanksImageURL3 = $thanksImageURL;
 	  }
 
-	  if ($this->getValue('thanksMessage')) {
-		$thanksMessage =
-			'<div class="newiine_box">
-			<img src="' . $thanksImageURL . '" alt="THANK YOU!">
-			<p>' .$this->getValue('thanksMessage'). '</p>
-			</div>'.PHP_EOL;
-		}
-
 	  if ($this->getValue('thanksMessage2')) {
 		$thanksMessage2 =
 	  '<div class="newiine_box">
@@ -295,7 +287,12 @@ class newIineButton extends Plugin {
 	  $showIcon$showCounts<span>いいね</span>
 
 	  <!-- お礼メッセージここから -->
-	  $popupDirection$thanksMessage$thanksMessage2$thanksMessage3</div>
+	  $popupDirection
+	  <div class="newiine_box">
+	  <img src="$thanksImageURL" alt="THANK YOU!">
+	  <p>$thanksMessage</p>
+	  </div>
+	  $thanksMessage2$thanksMessage3</div>
 	  <!-- お礼メッセージここまで -->
 	  </button>
 	  <!-- いいねボタン改ここまで -->
